@@ -81,7 +81,7 @@ export function WordSearchGame({ player }: Props) {
 
   const generateGrid = useCallback((words: string[]) => {
     // Размер сетки: больше для первого этапа (там длинные слова)
-    const size = stage === 1 ? 22 : 18
+    const size = stage === 1 ? 22 : 15
 
     const grid: string[][] = Array(size)
       .fill(null)
@@ -438,7 +438,7 @@ export function WordSearchGame({ player }: Props) {
               <div
                 className="grid gap-0.5 sm:gap-1"
                 style={{
-                  gridTemplateColumns: `repeat(${grid[0]?.length || 18}, minmax(0, 1fr))`
+                  gridTemplateColumns: `repeat(${grid[0]?.length || 15}, minmax(0, 1fr))`
                 }}
               >
                 {grid.map((row, rowIndex) =>
